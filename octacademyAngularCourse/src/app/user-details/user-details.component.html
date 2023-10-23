@@ -1,0 +1,46 @@
+<body>
+
+<div class="mainLayout">
+    <h1>User Details</h1>
+    <input type="text" placeholder="Name" [(ngModel)]="name" ><br><br>
+    <input type="text" placeholder="Email" [(ngModel)]="email"><br><br>
+    <textarea cols="30" rows="10" placeholder="Address" [(ngModel)]="address"></textarea><br><br>
+    <button (click)="AddUser()">SaveData</button><br><br>
+
+
+    <!-- Below are for Angular routing -->
+    <button routerLink="/" routerLinkActive="active">Home</button>
+    <!--Below  queryparam got nothing to do with the flow. Just added to see how to pass 
+        and consume the query parameters -->
+    <button routerLink="/showUsers"  routerLinkActive="active" [queryParams]="{Page:1,Orderby:'newest'}"> Show Users </button>
+    <router-outlet></router-outlet>
+  
+
+    <!--Removed below block and kept that in ShowUsers Component to implement Angular routing-->
+    <!-- <div *ngIf="userDetails.length>0;then showUsers else noData"></div>
+
+ <ng-template #showUsers>
+    <table>  
+        <tr>  
+            <th>#</th>  
+            <th>Name</th>  
+            <th>Email</th>  
+            <th>Address</th>  
+            <th>Action</th>  
+        </tr>  
+        <tr *ngFor="let user of userDetails;let i=index">  
+            <td>{{i+1}}</td>  
+            <td>{{user.Name}}</td>  
+            <td>{{user.Email}}</td> 
+            <td>{{user.Address}}</td>  
+            <td><button (click)="DeleteUser(user)">Delete</button></td>
+        </tr>  
+    </table>
+ </ng-template>
+
+ <ng-template #noData>
+  <h3 [style.color]="userDetails.length>0?'green':'red'"> No users Found !</h3>
+ </ng-template> -->
+
+</div>
+</body>

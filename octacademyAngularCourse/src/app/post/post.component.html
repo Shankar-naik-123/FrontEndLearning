@@ -1,0 +1,23 @@
+<p>{{postComponentTitle}}</p>
+<app-post-list [fromParentPost]='postParentData'> </app-post-list>
+
+<!--Event Handling-->
+Event Handling <button (click)='SendMessage()'>Click</button> <br><br>
+
+<!--Event Filtering -->
+Event Filtering <input type="text" (keyup.enter)="OnKeyUpEvent()"><br><br>
+
+<!--Template variable-->
+
+Template variable <input type="text" (keyup.enter)="OnKeyUpEventWithParam(username.value)" #username><br><br>
+
+<!--Two Way binding 
+ To Perform two way binding we use [(ngModule)] and this is nor from core .We have to import this from forms in app.module.cs -->
+
+ Two Way binding   <input type="text" [(ngModel)]="lastName" (keyup.enter)="SendLastName()"><br><br>
+
+ <!--One way datra binding is UniDirectional meaning it can send data only from Component to View cannot transfer vice versa.
+in the below exaple the value of text field get sets in the beginning from ts file varibale and on enter it will show up on the console page..
+which is static . bcz whenever we make change to text field from UI it won't shouw up the console as this won't update the variable in ts file.-->
+
+OneWayBinding Using propertyBinding <input type="text" [value]="Adress" (keyup.enter)="sendAdress()">

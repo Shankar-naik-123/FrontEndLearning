@@ -1,0 +1,16 @@
+<div class="mainLayout">
+    <h1> Post Form</h1><br>
+<input type="text" placeholder="Post Title" [(ngModel)]="postTitle" ><br><br>
+<textarea cols="30" rows="10" placeholder="Post Details" [(ngModel)]="postDetails"></textarea><br><br>
+<input type="text" placeholder="Image Url" [(ngModel)]="imageUrl"><br><br>
+<input type="text" placeholder="getLinks" [(ngModel)]="hypelink"><br><br>
+<input type="checkbox" [(ngModel)]="addBackground"> Add Background
+</div>
+
+<div class="previewarea">
+<img [src]="imageUrl">   
+<h1><span [class.yelloWback]="addBackground" >{{postTitle}}</span></h1>
+<p>{{postDetails}}</p>
+<a [href]="hypelink" target="_blank" [style.display]="hypelink?'block':'none'">MoreDetails</a>
+
+</div>

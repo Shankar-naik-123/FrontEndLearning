@@ -1,0 +1,35 @@
+.mainLayout{
+    margin-top:50px;
+    text-align:center
+}
+table{  
+   border-collapse: collapse;
+    width: 100%;   
+   
+}  
+th,td{  
+border: 2px solid green;
+color:black;
+padding: 15px;  
+}  
+th{
+    background-color: grey;
+}
+td{
+    background-color: rgb(235, 226, 226);
+}
+body{
+    background-image: url("https://img.freepik.com/free-photo/abstract-digital-grid-black-background_53876-97647.jpg");
+    height:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+h1{
+    color:whitesmoke;
+}
+.showUsers{
+   height: 100%;
+   min-height: 100vh;
+}

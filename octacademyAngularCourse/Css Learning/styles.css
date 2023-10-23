@@ -1,0 +1,20 @@
+body{
+	background-color: #152a4a;
+
+}
+.title{
+	color: white;
+	margin-left: 45%;
+	font-size: 40px;
+	text-shadow:turquoise;
+	padding: 30px ;
+}
+.about{
+  color: grey;
+  padding: 20px;
+  padding-left: 80px;
+  font-size: 16px;
+  background-image: url("./assets/Deltabackground.jpg");
+	size : 100%;
+	z-index: 1;
+}

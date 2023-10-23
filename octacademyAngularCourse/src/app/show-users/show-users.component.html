@@ -1,0 +1,26 @@
+<div class="showUsers" *ngIf="userDetails.length>0;then showUsers else noData"></div>
+
+ <ng-template #showUsers>
+    <table>  
+        <tr>  
+            <th>#</th>  
+            <th>Name</th>  
+            <th>Email</th>  
+            <th>Address</th>  
+            <th  colspan="2">Actions</th>  
+        </tr>  
+        <tr *ngFor="let user of userDetails;let i=index">  
+            <td>{{i+1}}</td>  
+            <td>{{user.name}}</td>  
+            <td>{{user.email}}</td> 
+            <td>{{user.address}}</td>  
+            <td><button [routerLink]="['/updateUserInfo',user.email]">UpdateInfo</button></td>
+            <td><button (click)="DeleteUser(user)">Delete</button></td>
+        </tr>  
+    </table>
+ </ng-template>
+ <router-outlet></router-outlet>
+
+ <ng-template #noData>
+  <h3 [style.color]="userDetails.length>0?'green':'red'"> No users Found !</h3>
+ </ng-template>

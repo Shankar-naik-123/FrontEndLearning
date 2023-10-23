@@ -1,0 +1,105 @@
+<!--<h1 [class.red-class]="bool"> Angular App </h1>
+<h1 [style.color]="bool?'red':'blue'">Style Binding</h1>
+
+<h2>{{dataFromPostChild}}</h2>
+<h2>{{dataFromPostChildviaOutpotDecor}}</h2>
+<img [src]='imgUrl' alt="">
+<app-navbar></app-navbar>
+<app-post [postComponentTitle]='postComponentTitle' (messageFromChild)='RecieveMessage($event)'></app-post>-->
+
+<!--Task 1
+<app-task1></app-task1>-->
+
+<!--Accessing string Array without ngFor <br>
+{{stringArray1}} <br><br>-->
+
+
+<!--Oldway without Ng Style
+    <h1 [style.color]="stringArray1.length>0?'green':'red'"
+    [style.textTransform]="stringArray1.length>0?'uppercase':'lowercase'">Accessing stringArray with ngFor</h1>-->
+
+<!-- New Way with ngStyle-->
+<!--<h1 [ngStyle]="{
+        color:stringArray1.length>0?'green':'red',
+    textTransform:stringArray1.length>0?'uppercase':'lowercase'}">Accessing stringArray with ngFor</h1>
+<br>
+<div *ngIf='stringArray1.length>0;then ShowData else noData'>
+
+</div>-->
+
+<!--Other ways to perform Css binding-->
+<!--h2 [class.main]="stringArray1.length>0">This is using class binding</h2>
+<h2 [ngClass]="{
+   main:stringArray1.length>0
+}"> This is ngClass binding</h2>
+
+<ng-template #ShowData>
+    <ul>
+        <li *ngFor="let post of stringArray1;let i=index">{{post}}
+            <button (click)="RemovePost(i)"> Delete </button><br><br>
+        </li>
+
+    </ul><br>
+</ng-template>
+
+<ng-template #noData>
+    <p style="color: red;"> No Data to Show! </p>
+</ng-template>
+
+<br><button (click)="AddPost()">Add Post</button><br><br>
+
+
+Accessing Entire Object Array with ngFor
+<ul>
+    <li *ngFor="let object of objects">{{object|json}}</li>
+</ul><br><br>
+
+Accessing Entire Object property with ngFor
+<ul>
+    <li *ngFor="let object of objects">{{object.title}}</li>
+</ul><br><br>
+
+<div>
+    <button (click)="setStep('step1')">Step1</button>
+    <button (click)="setStep('step2')">Step2</button>
+    <button (click)="setStep('step3')">Step3</button>
+</div>
+
+<div [ngSwitch]="formStep">
+    <div *ngSwitchCase="'step1'">See step step1</div>
+    <div *ngSwitchCase="'step2'">See step step2</div>
+    <div *ngSwitchCase="'step3'">See step step3</div>
+    <div *ngSwitchDefault>Something else</div>
+</div>-->
+
+<!--Task 2 -->
+<app-user-details></app-user-details>
+
+<!--Angular Pipes-->
+<!--Custom Pipes.   Need to show city in this format
+     city:<cityName>-->
+       
+<!--{{city.name | append}}
+<br><br>-->
+<!--We can generate custom pipes from cli. in that case cli will take care of all config things that we did 
+in append.pipets file and also it will add it to app.module.ts file 
+command to generate custom pipe
+ng g pipe <pipepath if any>/<pipename>
+    below command will create pipe in Pipes folder created. here we will see pipes with arguements
+    ng g pipe Pipes/edittext -->
+
+   <!-- About:{{city.about | edittext:30}};-->
+
+   <!--Angular Services:-->
+    <!--<app-posts></app-posts>
+  <app-postlists></app-postlists> -->
+  
+  <!-- Angular Forms -->
+<!--<app-employee></app-employee>-->
+
+
+
+<!--JavaScript Observables-->
+<!--<app-implement-observable></app-implement-observable>-->
+
+  
