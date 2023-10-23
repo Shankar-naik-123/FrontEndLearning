@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ccc;
+    background-image: url("./images/jobs.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+
+}
+
+.apply_form{
+    max-width:600px;
+    padding: 20px;
+    background-color: rgba(209, 174, 174, 0.4);
+    margin: 0 auto;
+    margin-top: 50px;
+    box-shadow: 4px 3px 5px rgba(1,1,1, 0.1);
+    border-radius:  10px;
+    
+}
+.title-small{
+    font-size: 20px;
+}
+.form_container{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;  
+        
+}
+
+.formItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+label{
+    font-size:15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input,select,textarea{
+    padding:10px;
+    border:1px solid black;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color:silver;
+}
+input:focus{
+    outline: 2px solid red;
+}
+textarea:focus{
+    outline: 2px solid red;
+}
+select:focus{
+    outline: 2px solid red;
+}
+h1{  
+    margin-left: 25%;
+}
+
+.applybutton{
+    display: flex;
+    flex-direction: row-reverse;
+    
+}
+
+button{
+    padding :10px;
+    margin-right: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+
+}
+button:hover{
+background-color: green;
+}
+
+
+
+
