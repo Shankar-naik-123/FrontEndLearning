@@ -1,0 +1,42 @@
+<div class="cart" *ngIf="getnoofcartItems()>=1">
+    <div class="cartItems">
+        <ul>
+            <li *ngFor="let item of cart.items">
+              <div class="img">
+                <img src="{{ item.food.imageUrl }}" alt="" />
+              </div>
+              <div class="foodname">
+                {{item.food.name}}
+              </div>
+              <div class="quantity">
+                <input type="number" min="0" placeholder="{{item.quantity}}" [(ngModel)]="item.quantity" id="" (change)="cartChangeQuantity(item.food.id,item.quantity)">
+                
+              </div>
+              <div class="price">
+                {{item.price|currency}}
+              </div>
+              <div class="remove">
+                <input type="button" value="Remove" (click)="removefromcart(item.food.id)">
+              </div>
+            </li>
+          </ul>
+    </div>
+  <div class="total">
+    <div class="totalquantity">
+        Count: {{cart.noOfItems}}
+    </div>
+    <div class="totalcartamount">
+       Price: {{cart.totalAmount|currency}}
+    </div>
+  </div>
+</div>
+<div class="emptycart" *ngIf="getnoofcartItems()<1">
+    <h2>
+        Your Cart is <Span class="red"> Empty!</Span>
+    </h2>
+   <!--<div class="backtoshop">
+        <input type="button" value="return to shop">
+    </div>-->
+    <input type="button" value="return to shop" (click)="homepage()">
+</div>
+

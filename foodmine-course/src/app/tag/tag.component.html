@@ -1,0 +1,7 @@
+<div class="tags">
+    <ul>
+        <li *ngFor="let tag of tags |keyvalue">
+       <a href="#" routerLink="/tag/{{tag.key}}">{{tag.key}}({{tag.value}})</a> 
+        </li>
+    </ul>
+</div>

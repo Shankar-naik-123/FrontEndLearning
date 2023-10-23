@@ -1,0 +1,118 @@
+.cart{
+    display: flex;
+    gap: 10%
+}
+.cart .cartItems{
+    font-size: 15px;
+    margin-top: 20px;
+    
+}
+.cart .total{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:10%;
+    border: 1px solid rgba(236, 90, 90, 0.726);
+    margin-top: 40px;
+   padding :30px;
+}
+
+.cart .cartItems .img{
+    width: 4em;
+    height:4em;
+    border-radius: 50%;
+}
+
+.cart .cartItems .img img{
+    width: 4em;
+    height:4em;
+    border-radius: 50%;
+}
+
+li{
+    list-style: none;
+}
+.cart .cartItems ul{
+    display: flex;
+    flex-direction: column;
+    
+    
+
+  
+}
+
+.cart .cartItems ul li{
+    display: flex;
+    gap:100px;
+    border: 1px solid rgba(236, 90, 90, 0.726);
+   padding-top: 40px;
+   padding-bottom: 30px;
+   padding-left: 50px;
+   padding-right: 90px;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.cart .cartItems .quantity input{
+    position: relative;
+    width: 3em;
+   
+}
+
+.cart .cartItems .foodname{
+    width:10em;
+    
+}
+
+.remove input{
+    background-color: rgb(230, 224, 224);
+    outline: none;
+    border: none;
+    padding:8px;
+    font-size: 10px;
+    color: red;
+    border-radius: 100vmax;
+    width: 5em;
+    padding-left: 5px;
+
+}
+.remove{
+    width: 5em;
+    border-radius: 100vmax;
+}
+.remove input:hover{
+    width: 5em;
+    border-radius: 100vmax;
+    background-color: red;
+    color: white;
+}
+
+.emptycart {
+    text-align: center;
+    margin-top: 10em;
+}
+.emptycart h2{
+    padding: 10px;
+    font-weight: bold;
+}
+.red{
+    color: red;
+}
+
+.emptycart .backtoshop
+{
+   padding :50px;
+}
+.emptycart  input{
+    width: 15em;
+    height: 3em;
+    border-radius: 100vmax;
+    background-color: red;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+
+}
+.emptycart  input:hover{
+    background-color: green;
+}

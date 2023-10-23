@@ -1,0 +1,19 @@
+.tags ul{
+    display:flex;
+    gap: 10px;
+    justify-content: center;
+    
+}
+
+ul{
+    list-style: none;
+
+}
+.tags ul li{
+    background-color: rgb(192, 188, 188);
+    border-radius: 100vmax;
+    padding:8px;
+    font-size: 15px;
+    color:rgb(4, 4, 189) ;
+    font-weight: bold;
+}

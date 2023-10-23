@@ -1,0 +1,36 @@
+<div class="foodpage">
+  <div class="foodimage">
+    <img src="{{ food.imageUrl }}" alt="{{ food.name }}" />
+  </div>
+  <div class="details">
+    <div class="title">
+      <span class="name">
+        {{ food.name }}
+      </span>
+      <span class="favourite {{ food.favorite ? 'red' : 'black' }}">
+        &#9829;
+      </span>
+    </div>
+
+    <div class="origin">
+      <span class="origins" *ngFor="let o of food.origins">
+        {{ o }}
+      </span>
+    </div>
+    <div class="tag">
+      <span class="tags" *ngFor="let t of food.tags">
+        {{ t }}
+      </span>
+    </div>
+    <div class="cookingtime">
+      Time to cook about <span style="font-weight: bold">{{ food.cookTime }}</span> minutes 
+    </div>
+    <div class="price"> Price: <span class="pricestyle">{{ food.price | currency }} </span></div><br />
+   
+      <div class="addtocart">
+        <input type="button" value="Add To Cart" (click)="addToCart(food.id)" >
+      </div>
+   
+    
+  </div>
+</div>

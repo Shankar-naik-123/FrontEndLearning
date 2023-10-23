@@ -1,0 +1,33 @@
+.searchbox .searcharea{
+    height: 3em;
+    width: 25em;
+    background-color: rgb(216, 218, 220);
+    padding: 20px;
+    border: rgb(216, 218, 220);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    outline: none;
+}
+
+.searchbox .searchbutton{
+    height: 3.2em;
+    width: 5em;
+    background-color: red;
+    font-size: 12.6px;
+    color: white;
+    border: red;
+    border-top-right-radius: 40%;
+    border-bottom-right-radius: 40%;
+    opacity: 0.7;
+}
+
+.searchbox{
+   margin-left: 35%;
+   margin-top: 2em;
+   outline: none;
+}
+
+.searchbox .searchbutton:hover{
+    opacity: 1;
+    cursor: pointer;
+}

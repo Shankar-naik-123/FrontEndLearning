@@ -1,0 +1,100 @@
+.foodpage{
+    display: flex;
+   justify-content: center;
+    gap: 50px;
+}
+.foodpage .foodimage{
+    width: 25em;
+    height: 20em;
+    margin-top: 30px;
+    box-shadow: 5px 5px 5px 5px rgb(64, 71, 72);
+    border-radius: 30px;
+    
+}
+
+.foodpage .foodimage img{
+   width: 25em;
+    height: 20em;
+    border-radius: 30px;
+}
+.foodpage .details{
+    width: 25em;
+    height: 20em;
+    margin-top: 50px;
+}
+.foodpage .details .title{
+font-size: 1.3em;
+font-weight: bold;
+display: flex;
+gap: 10em;
+}
+.foodpage .details .title .favourite{
+    font-size: 2em;
+   
+}
+.foodpage .details .title .name{
+    margin-top: 15px;
+   
+}
+.red {
+    color: red;
+  }
+  .black {
+    color: black;
+  }
+
+  .foodpage .details .origin {
+    display: flex;
+    gap: 10px;
+  }
+  .foodpage .details .origin .origins {
+    font-size: 13px;
+    background-color: rgb(218, 245, 247);
+    color: rgb(0, 0, 0);
+    padding: 6px 10px;
+    border-radius: 100vmax;
+  }
+
+  .foodpage .details .tag {
+    display: flex;
+    gap: 10px;
+   margin-top: 30px;
+  }
+  .foodpage .details .tag .tags {
+    font-size: 15px;
+    background-color: rgb(214, 217, 218);
+    color: rgb(43, 76, 239);
+    padding: 6px 10px;
+    font-weight: bold;
+    border-radius: 100vmax;
+   
+  }
+  .foodpage .details .cookingtime
+  {
+    margin-top: 20px;
+    font-size: 15px;
+  }
+
+  .foodpage .details .price{
+    margin-top: 20px;
+    color: rgb(170, 172, 173);
+  }
+  .foodpage .details .price .pricestyle{
+    color: green;
+    font-weight: bold;
+  }
+
+  .foodpage .details .addtocart input {
+     width: 300px;
+     height: 30px;
+     border-radius: 100vmax;
+     border: none;
+     background-color:red;
+     color: white;
+
+    
+  }
+  .foodpage .details .addtocart input:hover{
+    background-color: green;
+    cursor: pointer;
+  }
