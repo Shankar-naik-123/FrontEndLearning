@@ -23,7 +23,7 @@ ngOnInit():void{
 this.cartservice.addToCart(item1);
 let item2=new cartItem(this.foodService.getFoodById(2));
 this.cartservice.addToCart(item2);*/
-//---------
+//----------
 
 
   this.route.params.subscribe(params=>{
