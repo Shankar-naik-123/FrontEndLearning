@@ -10,6 +10,10 @@ import { FormsModule } from '@angular/forms';
 import { TagComponent } from './tag/tag.component';
 import { FoodpageComponent } from './foodpage/foodpage.component';
 import { CartComponent } from './cart/cart.component';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { ManageFoodsComponent } from './manage-foods/manage-foods.component'
+import { JwtInterceptorService } from './services/Auth/jwt-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -19,14 +23,17 @@ import { CartComponent } from './cart/cart.component';
     SearchComponent,
     TagComponent,
     FoodpageComponent,
-    CartComponent
+    CartComponent,
+    LoginComponent,
+    ManageFoodsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [{provide:HTTP_INTERCEPTORS,useClass:JwtInterceptorService,multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

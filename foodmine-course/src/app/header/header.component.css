@@ -29,3 +29,28 @@ nav ul li a{
     
     display:inline-block;
 }
+
+.logout{
+    width:40px;
+    overflow: hidden;
+
+}
+
+.logout img{
+    width:100%;
+    height: auto;
+    margin:0
+}
+
+.container .profile h1{
+    background-color: rgb(24, 103, 67);
+    color: rgb(191, 196, 182);
+    border-radius:100vmax;
+    padding: 10px;
+    font-size: 10px;
+    margin-top: 10px;
+    position: relative;
+}
+
+
+

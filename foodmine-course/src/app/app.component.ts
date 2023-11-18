@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'foodmine-course';
+  loggedIn:boolean=false;
+
+  ngOnInit():void{
+   this.loggedIn=(localStorage.getItem('authToken')!=null);
+    console.log(this.loggedIn);
+  }
+  public LoggedIn():void{
+    
+    this.loggedIn=(localStorage.getItem('authToken')!=null);
+  }
+
+  public LoggedOut():void{
+   
+    this.loggedIn=(localStorage.getItem('authToken')!=null);
+  }
+ 
+  
 }

@@ -6,7 +6,18 @@
         <li>
           <a href="#" routerLink="/cart-page">Cart</a>
         </li>
+        <li>
+          <div class="profile">
+            <h1>{{username}}</h1>
+          </div>
+        </li>
       </ul>
+
+      <div class="logout">
+        <a href="#" (click)="logout()">
+          <img src="/assets/images/logouticon.jpg" alt="" />
+        </a>
+      </div>
     </nav>
   </div>
 </header>
